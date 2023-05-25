@@ -42,66 +42,66 @@
 	;---------Junio 2022------------
 	MMjunio22 BYTE "Ingrese el monto de junio 2022: ", 0
 	_nota5 db "%d", 0
-	junio22 dword _nota5
+	junio22 dword [_nota5]
 
 
 	;---------julio22 2022------------
 	MMjulio22 BYTE "Ingrese el monto de julio 2022: ", 0
 	_nota6 db "%d", 0
-	julio22 dword _nota6
+	julio22 dword [_nota6]
 
 	;---------agosto22  2022------------
 	MMagosto22  BYTE "Ingrese el monto de agosto 2022: ", 0
 	_nota7 db "%d", 0
-	agosto22  dword _nota7
+	agosto22  dword [_nota7]
 
 	;---------septiembre   2022------------
 	MMseptiembre22  BYTE "Ingrese el monto de septiembre 2022: ", 0
 	_nota8 db "%d", 0
-	septiembre22  dword _nota8
+	septiembre22  dword [_nota8]
 
 	;---------octubre 2023------------
 	MMoctubre22 BYTE "Ingrese el monto de octubre 2022: ", 0
 	_nota9 db "%d", 0
-	octubre22 dword _nota9
+	octubre22 dword [_nota9]
 
 	;---------nombiembre 2023------------
 	MMnoviembre22 BYTE "Ingrese el monto de noviembre 2022: ", 0
 	_nota10 db "%d", 0
-	noviembre22 dword _nota10
+	noviembre22 dword [_nota10]
 
 	;---------Diciembre 2022------------
 	MMdiciembre22 BYTE "Ingrese el monto de diciembre 2022: ", 0
 	_nota11 db "%d", 0
-	diciembre22 dword _nota11
+	diciembre22 dword [_nota11]
 
 	;enero23
 	;---------Enero 2023------------
 	MMenero23 BYTE "Ingrese el monto de enero 2023 ", 0
 	_nota12 db "%d", 0
-	enero23 dword _nota12
+	enero23 dword [_nota12]
 
 
 	;---------Febrero 2023------------
 	MMfebrero23 BYTE "Ingrese el monto de febrero23 2023: ", 0
 	_nota13 db "%d", 0
-	febrero23 dword _nota13
+	febrero23 dword [_nota13]
 
 	;---------Marzo 2023------------
 	MMmarzo23 BYTE "Ingrese el monto de marzo 2023: ", 0
 	_nota14 db "%d", 0
-	marzo23 dword _nota14
+	marzo23 dword [_nota14]
 
 
 	;---------Abril 2023------------
 	MMabril23 BYTE "Ingrese el monto de abril 2023: ", 0
 	_nota15 db "%d", 0
-	abril23 dword _nota15
+	abril23 dword [_nota15]
 
 	;---------Mayo 2023------------
 	MMmayo23 BYTE "Ingrese el monto de mayo23 2023: ", 0
 	_nota16 db "%d", 0
-	mayo23 dword _nota16
+	mayo23 dword [_nota16]
 
 
 	;---------------------------------------------------------------
@@ -167,7 +167,7 @@
 
 
 
-				;Manejo de monto Enero
+				;Manejo de monto Junio
 		push ebp
         mov ebp, esp; mueve el ebp
 		push offset MMjunio22; hace pusho hacie el stack en cobro+
