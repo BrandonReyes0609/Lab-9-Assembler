@@ -41,67 +41,67 @@
 
 	;---------Junio 2022------------
 	MMjunio22 BYTE "Ingrese el monto de junio 2022: ", 0
-	junio22 dword 0
 	_nota5 db "%d", 0
+	junio22 dword _nota5
 
 
 	;---------julio22 2022------------
 	MMjulio22 BYTE "Ingrese el monto de julio 2022: ", 0
-	julio22 dword 0
 	_nota6 db "%d", 0
+	julio22 dword _nota6
 
 	;---------agosto22  2022------------
 	MMagosto22  BYTE "Ingrese el monto de agosto 2022: ", 0
-	agosto22  dword 0
 	_nota7 db "%d", 0
+	agosto22  dword _nota7
 
 	;---------septiembre   2022------------
 	MMseptiembre22  BYTE "Ingrese el monto de septiembre 2022: ", 0
-	septiembre22  dword 0
 	_nota8 db "%d", 0
+	septiembre22  dword _nota8
 
 	;---------octubre 2023------------
 	MMoctubre22 BYTE "Ingrese el monto de octubre 2022: ", 0
-	octubre22 dword 0
 	_nota9 db "%d", 0
+	octubre22 dword _nota9
 
 	;---------nombiembre 2023------------
 	MMnoviembre22 BYTE "Ingrese el monto de noviembre 2022: ", 0
-	noviembre22 dword 0
 	_nota10 db "%d", 0
+	noviembre22 dword _nota10
 
 	;---------Diciembre 2022------------
 	MMdiciembre22 BYTE "Ingrese el monto de diciembre 2022: ", 0
-	diciembre22 dword 0
 	_nota11 db "%d", 0
+	diciembre22 dword _nota11
 
 	;enero23
 	;---------Enero 2023------------
 	MMenero23 BYTE "Ingrese el monto de enero 2023 ", 0
-	enero23 dword 0
 	_nota12 db "%d", 0
+	enero23 dword _nota12
 
 
 	;---------Febrero 2023------------
 	MMfebrero23 BYTE "Ingrese el monto de febrero23 2023: ", 0
-	febrero23 dword 0
 	_nota13 db "%d", 0
+	febrero23 dword _nota13
 
 	;---------Marzo 2023------------
 	MMmarzo23 BYTE "Ingrese el monto de marzo 2023: ", 0
-	marzo23 dword 0
 	_nota14 db "%d", 0
+	marzo23 dword _nota14
 
 
 	;---------Abril 2023------------
 	MMabril23 BYTE "Ingrese el monto de abril 2023: ", 0
-	abril23 dword 0
 	_nota15 db "%d", 0
+	abril23 dword _nota15
 
 	;---------Mayo 2023------------
 	MMmayo23 BYTE "Ingrese el monto de mayo23 2023: ", 0
-	mayo23 dword 0
 	_nota16 db "%d", 0
+	mayo23 dword _nota16
 
 
 	;---------------------------------------------------------------
@@ -165,16 +165,153 @@
 		push ebp; Guarda el valor en el stack
 		mov ebp, esp; Establece el punto actual del stack
 
-		push offset MPuntuacion; Hace Push de la MPuntacion en el stack
-		call printf; Llama la función de pintf
 
-		lea eax, _calificacion
-		push eax ; Hace push de la variable eax
-		push offset formatomt1 ; hace push del ftml o formato
-		call scanf ; hace la llamada de la función scanf
-		movzx eax, _calificacion;mueve la varaible _calificación hacia eax
 
-		mov _calificacion2, eax;mueve la varaible _calificación hacia eax
+				;Manejo de monto Enero
+		push ebp
+        mov ebp, esp; mueve el ebp
+		push offset MMjunio22; hace pusho hacie el stack en cobro+
+        call printf
+
+        lea eax, _nota5
+		push eax ; Empujar dirección a la pila
+		push offset formatomt ; Empujar formato a la pila
+		call scanf
+
+				;Manejo de monto Julio
+		push ebp
+        mov ebp, esp; mueve el ebp
+		push offset MMjulio22; hace pusho hacie el stack en cobro+
+        call printf
+
+        lea eax, _nota6 
+		push eax ; Empujar dirección a la pila
+		push offset formatomt ; Empujar formato a la pila
+		call scanf
+
+				;Manejo de monto Agosto
+		push ebp
+        mov ebp, esp; mueve el ebp
+		push offset MMagosto22; hace pusho hacie el stack en cobro+
+        call printf
+
+        lea eax, _nota7
+		push eax ; Empujar dirección a la pila
+		push offset formatomt ; Empujar formato a la pila
+		call scanf
+
+				;Manejo de monto Septiembre
+		push ebp
+        mov ebp, esp; mueve el ebp
+		push offset MMseptiembre22; hace pusho hacie el stack en cobro+
+        call printf
+
+        lea eax, _nota8
+		push eax ; Empujar dirección a la pila
+		push offset formatomt ; Empujar formato a la pila
+		call scanf
+
+				;Manejo de monto Octubre
+		push ebp
+        mov ebp, esp; mueve el ebp
+		push offset MMoctubre22; hace pusho hacie el stack en cobro+
+        call printf
+
+        lea eax, _nota9 
+		push eax ; Empujar dirección a la pila
+		push offset formatomt ; Empujar formato a la pila
+		call scanf
+
+				;Manejo de monto Noviembre
+		push ebp
+        mov ebp, esp; mueve el ebp
+		push offset MMnoviembre22; hace pusho hacie el stack en cobro+
+        call printf
+
+        lea eax, _nota10
+		push eax ; Empujar dirección a la pila
+		push offset formatomt ; Empujar formato a la pila
+		call scanf
+
+				;Manejo de monto Diciembre
+		push ebp
+        mov ebp, esp; mueve el ebp
+		push offset MMdiciembre22; hace pusho hacie el stack en cobro+
+        call printf
+
+        lea eax, _nota11
+		push eax ; Empujar dirección a la pila
+		push offset formatomt ; Empujar formato a la pila
+		call scanf
+
+				;Manejo de monto Enero
+		push ebp
+        mov ebp, esp; mueve el ebp
+		push offset MMenero23; hace pusho hacie el stack en cobro+
+        call printf
+
+        lea eax, _nota12
+		push eax ; Empujar dirección a la pila
+		push offset formatomt ; Empujar formato a la pila
+		call scanf
+
+				;Manejo de monto Febrero
+		push ebp
+        mov ebp, esp; mueve el ebp
+		push offset MMfebrero23; hace pusho hacie el stack en cobro+
+        call printf
+
+        lea eax, _nota13
+		push eax ; Empujar dirección a la pila
+		push offset formatomt ; Empujar formato a la pila
+		call scanf
+
+				;Manejo de monto Marzo
+		push ebp
+        mov ebp, esp; mueve el ebp
+		push offset MMmarzo23; hace pusho hacie el stack en cobro+
+        call printf
+
+        lea eax, _nota14
+		push eax ; Empujar dirección a la pila
+		push offset formatomt ; Empujar formato a la pila
+		call scanf
+
+				;Manejo de monto Abril
+		push ebp
+        mov ebp, esp; mueve el ebp
+		push offset MMabril23; hace pusho hacie el stack en cobro+
+        call printf
+
+        lea eax, _nota15
+		push eax ; Empujar dirección a la pila
+		push offset formatomt ; Empujar formato a la pila
+		call scanf
+
+				;Manejo de monto Mayo
+		push ebp
+        mov ebp, esp; mueve el ebp
+		push offset MMmayo23; hace pusho hacie el stack en cobro+
+        call printf
+
+        lea eax, _nota16 
+		push eax ; Empujar dirección a la pila
+		push offset formatomt ; Empujar formato a la pila
+		call scanf
+
+
+
+		;Lo que hiciste
+		;push offset MMjunio22; Hace Push de la MPuntacion en el stack
+		;call printf; Llama la función de pintf
+
+		;lea eax, _calificacion
+		;push eax ; Hace push de la variable eax
+		;push offset formatomt1 ; hace push del ftml o formato
+		;call scanf ; hace la llamada de la función scanf
+		;movzx eax, _calificacion;mueve la varaible _calificación hacia eax
+
+		;mov _calificacion2, eax;mueve la varaible _calificación hacia eax
 
 		;Manejo del nombre
 		push ebp; Hace push del ebp
